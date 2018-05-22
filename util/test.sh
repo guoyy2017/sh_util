@@ -1,5 +1,8 @@
 #!/bin/bash
 
+高级用法
+# https://blog.csdn.net/mao834099514/article/details/52327018
+
 #sed 命令使用 sed 命令行格式为： sed [选项] ‘ command’ 输入文本    & 用法需要关注  ,行范围  1～5  行跨度 -e 命令是编辑命令  获取下一行： n 命令 
 #转换： y，命令 退出： q 命令 {} 执行命令组
 #参考地址 https://www.cnblogs.com/ginvip/p/6376049.html
@@ -131,4 +134,65 @@
 #             2、除了*)模式，各个分支中;;是必须的，;;相当于其他语言中的break
 
 #             3、 | 分割多个模式，相当于or
+
+
+shell 脚本中特殊变量  BASH_SOURCE FUNCNAME
+
+test 命令学习
+
+string  操作
+
+trap命令是linux内建命令，用于捕捉信号
+
+#LINENO是shell内部变量,打印执行命令的行号
+
+ tee命令产生的数据流向字母T，将一个输出分为两个支流，一个到标准输出另一个到某输出文件
+
+ "$UID" -ne 0  判断是不是root用户
+
+ shift和getopts  getopts :ab: variable
+
+ shc工具给脚本增加一层额外的安全保护
+
+ shc -v -f filename.sh，-v是输出详细编译日志，-f指定脚本的名称。加密成功后会生成以.x和.c结尾的两个新文件，如生成可执行文件filename.sh.x和C语言源文件filename.sh.x.c 
+
+ max 和 array  使用
+
+ shell map
+2016年12月11日 16:45:13
+阅读数：2122
+#1、declare -A 变量名 A一定要是大写的A
+
+
+declare -A map=(["sunjun"]="a" ["jason"]="b" ["lee"]="c")
+
+
+echo ${#map[*]}
+
+
+#2、取出所有的value
+echo ${map[@]}
+echo ${map[*]}
+
+
+#3、取出所有的keys
+
+
+echo ${!map[@]}
+echo ${!map[*]}
+
+
+#4、map赋值，更改
+map["hello"]="isu"
+
+
+#5、取值
+echo ${map["hello"]}
+
+
+#6、map的遍历
+for key in ${!map[@]}
+do
+   echo ${map[$key]}
+done
 
