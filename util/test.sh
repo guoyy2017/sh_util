@@ -3,6 +3,10 @@
 高级用法
 # https://blog.csdn.net/mao834099514/article/details/52327018
 
+
+curl 命令学习
+
+
 #sed 命令使用 sed 命令行格式为： sed [选项] ‘ command’ 输入文本    & 用法需要关注  ,行范围  1～5  行跨度 -e 命令是编辑命令  获取下一行： n 命令 
 #转换： y，命令 退出： q 命令 {} 执行命令组
 #参考地址 https://www.cnblogs.com/ginvip/p/6376049.html

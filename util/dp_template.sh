@@ -6,6 +6,8 @@
 DIR=$(cd "$(dirname "$0")";pwd) 
 echo $DIR
 
+declare -A map=(["sunjun"]="a" ["jason"]="b" ["lee"]="c")
+
 usage() {
 	echo "USAGE: $0 python | $0 java | $0 html "
 	exit 1
